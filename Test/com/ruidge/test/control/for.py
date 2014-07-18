@@ -10,3 +10,7 @@ for i in range(1,10,2):#新语句块总是以冒号作为开始
 else:
     print
     print 'for else'
+    
+aa = ['a',2,'sdf']
+for i in aa:
+    print i

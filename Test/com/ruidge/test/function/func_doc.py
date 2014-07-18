@@ -21,6 +21,7 @@ def max(x, y):
         return str(y) + ' is maximum'
 
 print max(5, 3)
+print max(5, '7')
 print max.__doc__ #把函数当做对象去调用内部属性了...
 
-help(max) #其实DocStrings是help()打印出来的内容
+# help(max) #其实DocStrings是help()打印出来的内容
