@@ -14,9 +14,10 @@ import com.ruidge.test.mokuai.module_sayhi as aa
 
 haha.func(1)
 
-# module_name:
-# if __name__ == '__main__':
-#     print 'This program is being run by itself'
-# else:
-#     print 'I am being imported from another module'
 aa.sayHi()
+
+print "aa", "bb" #加逗号自动空格连接字符串
+aaa = {'11':'111','22':'222'}
+print len(aaa)
+for k,v in aaa.items():
+    print k , "--", v

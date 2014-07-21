@@ -13,6 +13,7 @@ if __name__ == '__main__':
     module_sayhi.sayHi()
     print module_sayhi.hello
 else:
+    print '__name__ is ' + __name__
     print 'I am being imported from another module'
 
 # 每个Python模块都有它的__name__，如果它是'__main__'，这说明这个模块被用户单独运行，
