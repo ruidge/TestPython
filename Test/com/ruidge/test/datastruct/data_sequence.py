@@ -9,13 +9,15 @@ Created on 2014-7-21
 # 索引操作符让我们可以从序列中抓取一个特定项目。切片操作符让我们能够获取序列的一个切片，即一部分序列。
 shoplist = ['apple', 'mango', 'carrot', 'banana','apple']
 
-# Indexing or 'Subscription' operation
+# Indexing or 'Subscription' operation 
+#dict []中只能是key值,不存在的key值报KeyError: 列表和原则int越界报IndexError
 print 'Item %s is %s' % (shoplist.index('apple', 1 ),shoplist[0])
 print 'Item 1 is', shoplist[1]
 print 'Item 2 is', shoplist[2]
 print 'Item 3 is', shoplist[3]
 print 'Item -1 is', shoplist[-1]
 print 'Item -2 is', shoplist[-2]
+# print 'Item 100 is', shoplist[100]
 print '------------'
 
 # Slicing on a list
@@ -53,3 +55,5 @@ del mylist[0] # remove first item
 print 'shoplist is', shoplist
 print 'mylist is', mylist
 # notice that now the two lists are different
+
+print 'join function',"--".join(shoplist)

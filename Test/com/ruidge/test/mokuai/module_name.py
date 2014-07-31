@@ -16,8 +16,7 @@ else:
     print '__name__ is ' + __name__
     print 'I am being imported from another module'
 
-# 每个Python模块都有它的__name__，如果它是'__main__'，这说明这个模块被用户单独运行，
-# 我们可以进行相应的恰当操作。(沒看懂...)
+# 每个Python模块都有它的__name__，如果它是'__main__'，这说明这个模块被用户单独运行，我们可以进行相应的恰当操作。
 
 #不像Java没有入口的概念,导入的时候直接把里面的函数全执行了,
-# 可以通过__name__=='__main__'判断是否是当前的模块
+# 可以通过__name__=='__main__'判断是否是当前的模块 见test1

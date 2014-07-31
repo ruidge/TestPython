@@ -14,7 +14,8 @@ def max(x, y):
     y = int(y)
 
     if x > y:
-#         return x , 'is maximum' #可以但是会自动在外面加上一层括号(5, 'is maximum')
+        print x , 'is maximum'
+#         return x , 'is maximum' #返回元组...
 #         return x + ' is maximum' #不可以,不支持int和str的直接加法
         return str(x) + ' is maximum'#可以,先将int转为str类型
     else:
@@ -22,6 +23,7 @@ def max(x, y):
 
 print max(5, 3)
 print max(5, '7')
+print type(max(5, 3))
 print max.__doc__ #把函数当做对象去调用内部属性了...
 
 # help(max) #其实DocStrings是help()打印出来的内容

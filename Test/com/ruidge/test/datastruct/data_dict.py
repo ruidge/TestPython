@@ -12,6 +12,9 @@ ab = {       'Swaroop'   : 'swaroopch@byteofpython.info',
 
 print "Swaroop's address is %s" % ab['Swaroop']
 
+print ab["Larry"]
+# print ab["haha"] #KeyError: 'haha'
+
 # Adding a key/value pair
 ab['Guido'] = 'guido@python.org'
 
