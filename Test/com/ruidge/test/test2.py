@@ -11,11 +11,21 @@ import zipfile
 print time.strftime('%Y-%m-%d-%H-%M-%S %z %Z'
 #                     ,'%Y %m %d %Z %z'
                     )
+#ERROR...
+# print time.strftime('%Y-%m-%d'
+#                     ,(2000,12,20)
+#                     )
+print time.strftime('%Y-%m-%d'
+                    )
 
 ts = time.localtime()
+print 'time.localtime() length is ',str(len(ts))
 for a in ts:
     print a,
-
+print
+#传一个长度为9的元组?
+print time.strftime('%Y-%m-%d-%H-%M-%S %z %Z',ts
+                    )
 print "\n",type(time.localtime())
 # print (time.struct_time.tm_hour,time.struct_time.tm_min,time.struct_time.tm_sec)
 
@@ -35,7 +45,11 @@ os.system('adb devices')
 #     return True
 # print exists('e://work')
 
-if not os.path.exists('E:\\'):
-    os.makedirs('E:\\test')
-z = zipfile.ZipFile('E:\\test', mode="r", compression=zipfile.ZIP_STORED,
-     allowZip64=False)
+if os.path.exists('E:\\'):
+    if not os.path.exists('E:\\test'):
+        os.makedirs('E:\\test')
+        os.makedirs(r'E:\test\a\b')
+#创建了一个对象...
+zipFile = zipfile.ZipFile('E:\\test.zip', 'w')  
+zipFile.write('E:\\test\\',r"E:\test_rename")
+zipFile.close()
