@@ -14,3 +14,7 @@ else:
 aa = ['a',2,'sdf']
 for i in aa:
     print i
+    
+print type(range(1,5))
+for i in range(1,5):
+    print i,
