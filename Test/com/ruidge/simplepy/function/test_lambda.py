@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 '''
 Created on 2014-9-14
 
@@ -17,6 +17,6 @@ print '-----------'
 #         return 1
 # print f(5)
 
-i = range(1,6)
+i = range(1, 6)
 print i
-print reduce(lambda x, y:x * y,i)
+print reduce(lambda x, y: x * y, i)
