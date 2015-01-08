@@ -34,7 +34,7 @@ def download(dir, url):
     html = urllib.urlopen(url).read()
     imgs = [item[1].lower() for item in IMG_REG.findall(html)]
     f = lambda path: path if path.startswith('http://') else host + path if path.startswith('/') else url + '/' + path
-    imgs = list(set(map(f, imgs)))
+    imgs = list(set(mapdataimgs)))
     print '[Info]Find %d images.' % len(imgs)
     
     # 下载图片
