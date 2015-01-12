@@ -15,8 +15,8 @@ def insertSort(data):
             keyV = data[j]
             i = j - 1
             while(i >= 0):
-                if(data[i + 1] < data[i]):
-                    data[i] = data[i + 1]
+                if(data[i] > keyV):
+                    data[i + 1] = data[i]
                     i = i - 1 
                 else:
                     break
@@ -37,5 +37,6 @@ def InsertionSort(A):
 if __name__ == '__main__':
     print data
     clone1 = data[:]
-    InsertionSort(clone1);
+    insertSort(clone1);
+#     InsertionSort(clone1);
     print clone1
