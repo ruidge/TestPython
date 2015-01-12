@@ -9,6 +9,7 @@ number = 23
 running = True
 
 while running:#新语句块总是以冒号作为开始
+    #raw_input将输入都看作字符串,input输入有格式,比如整数,浮点,字符串需要用引号包围#
     guess = int(raw_input('Enter an integer : '))
 
     if guess == number:

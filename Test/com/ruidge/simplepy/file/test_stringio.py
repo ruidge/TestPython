@@ -6,7 +6,8 @@ Created on 2014-8-4
 '''
 import StringIO 
 s = StringIO.StringIO("JGood is a handsome boy") 
-s.write("JGood is a handsome boy \r\n") 
+s.seek(0, 2)  #初始化完成以后,pos在0,所以后写入的会把先写入的覆盖掉
+# s.write("JGood is a handsome boy \r\n") 
 s.write('okkkk中国') 
 s.seek(0) 
 print s.read() 
