@@ -14,6 +14,8 @@ print ";".join(a)
 
 i = None
 j = str(None)
+print i
+print j
 print type(i)
 print type(j)
 # None.split()

@@ -19,5 +19,8 @@ aa.sayHi()
 print "aa", "bb" #加逗号自动空格连接字符串
 aaa = {'11':'111','22':'222'}
 print len(aaa)
-for k,v in aaa.items():
-    print k , "--", v
+# for k,v in aaa.items():
+#     print k , "--", v
+for a in aaa.items():
+    print type(a)
+    print a

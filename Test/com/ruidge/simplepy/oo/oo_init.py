@@ -20,12 +20,12 @@ class Person:
 #         print r'__init__(self)'
     def __init__(self, age=10):  # 构造函数,不需要声明域,直接进行赋值...只能有一个构造函数
         self.age = age
-        print r'__init__(self,age = 10)'
+        print r'__init__(self,age = ' + str(self.age) + ')'
     
     def sayHi(self):  # self表示自己,类似java中的this
         print 'name is %s , age is %d' % (self.name, self.age)
         
-# p = Person()  # 报错,没有age这个域
+p = Person()  # 没有缺省的构造函数
 p = Person(100)  # 直接调用'构造函数'创建对象
 p.name = 'zhangsan'
 # p.age = 90

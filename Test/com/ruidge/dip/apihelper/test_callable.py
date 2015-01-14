@@ -29,6 +29,6 @@ if __name__ == "__main__":
     print callable(string.punctuation)
      
     #显示所有__buildin__的内置函数
-    test_apihelper.info(__builtin__)
+#     test_apihelper.info(__builtin__)
     
     
