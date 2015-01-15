@@ -42,6 +42,7 @@ if __name__ == "__main__":
     print td1.get("bb", "bb")
     print td1.get("cc", "cc")
     print td1
+    print td1['aa']
     print "-----------------------------"
     td2 = TestDict1("haha", 100)
     print td2

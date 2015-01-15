@@ -36,6 +36,13 @@ class FileInfo(UserDict):
 
 class MP3FileInfo(FileInfo):
     "store ID3v1.0 MP3 tags"
+# 类属性,类似static;成员属性用self.XXX在不需要定义
+# 类属性既可以通过直接对类的引用，也可以通过对类的任意实例的引用来使用。
+# 在 Java 中，静态变量 (在 Python 中叫类属性) 和实例变量 (在 Python 中叫数据属性) 两者都是紧跟在类定义之后定义的 (一个有 static 关键字，一个没有)。
+# 在 Python 中，只有类属性可以定义在这里，数据属性定义在 __init__ 方法中。
+# 类属性可以作为类级别的常量来使用 (这就是为什么我们在 MP3FileInfo 中使用它们)，但是它们不是真正的常量。你也可以修改它们。
+# 在 Python 中没有常量。如果你试图努力的话什么都可以改变。这一点满足 Python 的核心原则之一：坏的行为应该被克服而不是被取缔。
+# 如果你真正想改变 None 的值，也可以做到，但当无法调试的时候别来找我。
     tagDataMap = {"title"   : (3, 33, stripnulls),
                   "artist"  : (33, 63, stripnulls),
                   "album"   : (63, 93, stripnulls),
@@ -78,6 +85,23 @@ def listDirectory(directory, fileExtList):
     return [getFileInfoClass(f)(f) for f in fileList]                             
 
 if __name__ == "__main__":
-    for info in listDirectory("/music/_singles/", [".mp3"]):
-        print "\n".join(["%s=%s" % (k, v) for k, v in info.items()])
-        print
+#     for info in listDirectory("/music/_singles/", [".mp3"]):
+#         print "\n".join(["%s=%s" % (k, v) for k, v in info.items()])
+#         print
+    info = MP3FileInfo();
+    print info
+    info['name'] = 'C:\\Users\\zhangrui6\\Desktop\\test.mp3'
+    print info
+
+# 专用方法相关:
+# 在 Java 中，通过使用 str1 == str2 可以确定两个字符串变量是否指向同一块物理内存位置。这叫做对象同一性，在 Python 中写为 str1 is str2。
+# 在 Java 中要比较两个字符串值，你要使用 str1.equals(str2)；在 Python 中，你要使用 str1 == str2。
+
+# 专用方法意味着任何类 可以像字典一样保存键-值对，只要定义 __setitem__ 方法。
+# 任何类可以表现得像一个序列，只要定义 __getitem__ 方法。
+# 任何定义了 __cmp__ 方法的类可以用 == 进行比较。
+# 并且如果你的类表现为拥有类似长度的东西，不要定义 GetLength 方法，而定义 __len__ 方法，并使用 len(instance)。
+
+# Python 存在许多其它的专用方法。有一整套的专用方法，可以让类表现得象数值一样，允许你在类实例上进行加、减，以及执行其它算数操作。
+# (关于这一点典型的例子就是表示复数的类，数值带有实数和虚数部分。) 
+# __call__ 方法让一个类表现得像一个函数，允许你直接调用一个类实例。并且存在其它的专用函数，允许类拥有只读或只写数据属性
