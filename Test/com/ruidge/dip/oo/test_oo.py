@@ -32,7 +32,7 @@ class FileInfo(UserDict):
     "store file metadata"
     def __init__(self, filename=None):
         UserDict.__init__(self)
-        self["name"] = filename
+        self["name"] = filename #这个时候其实是调用了__setitem__函数,MP3子类复写了这个方法加入了自定义解析
 
 class MP3FileInfo(FileInfo):
     "store ID3v1.0 MP3 tags"

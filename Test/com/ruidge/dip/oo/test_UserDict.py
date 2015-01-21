@@ -44,26 +44,30 @@ if __name__ == "__main__":
     print td1
     print td1['aa']
     print "-----------------------------"
-    td2 = TestDict1("haha", 100)
-    print td2
-    print td2.get("aa", "aa")
-    print td2.get("bb", "bb")
-    print td2.get("cc", "cc")
-    print td2
-    print "-----------------------------"
-    tl1 = TestList("haha", 100)
-    print tl1.__len__()
-    print tl1
-    print tl1.pop()
-    print tl1
+    print td1.__class__ is UserDict
+    print td1.__class__ is TestDict #实例
+    print isinstance(td1, UserDict) #实例或者子类
     
-    aa = ['a','b','c']
-    import copy
-    bb = copy.copy(aa)
-    print aa
-    print id(aa)
-    print bb
-    print id(bb)
+#     td2 = TestDict1("haha", 100)
+#     print td2
+#     print td2.get("aa", "aa")
+#     print td2.get("bb", "bb")
+#     print td2.get("cc", "cc")
+#     print td2
+#     print "-----------------------------"
+#     tl1 = TestList("haha", 100)
+#     print tl1.__len__()
+#     print tl1
+#     print tl1.pop()
+#     print tl1
+#     
+#     aa = ['a','b','c']
+#     import copy
+#     bb = copy.copy(aa)
+#     print aa
+#     print id(aa)
+#     print bb
+#     print id(bb)
     
 
 
