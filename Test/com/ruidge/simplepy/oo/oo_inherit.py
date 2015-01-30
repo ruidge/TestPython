@@ -26,20 +26,20 @@ class Teacher(SchoolMember):
         SchoolMember.tell(self)
         print 'Salary: "%d"' % self.salary
 
-class Student(SchoolMember):
+class Demo(SchoolMember):
     '''Represents a student.'''
     def __init__(self, name, age, marks):
         #类似于super,但是得显式调用,通过类名调用,将self作为形参传过去.
         SchoolMember.__init__(self, name, age) 
         self.marks = marks
-        print '(Initialized Student: %s)' % self.name
+        print '(Initialized Student: %Demoelf.name
 
     def tell(self):
         SchoolMember.tell(self)
         print 'Marks: "%d"' % self.marks
 
 t = Teacher('zhangsan', 40, 30000)
-s = Student('lisi', 22, 75)
+s = Student('lDemo2, 75)
 
 print  # prints a blank line
 

@@ -32,8 +32,7 @@ def make_repeater(n):
 #??????
 def bool(n):
     return lambda b: True if n > 0 else False 
-twice = make_repeater(2)
-
+twice = make_repeater(d)d
 print twice('word')
 print twice(5)
 print bool(0)

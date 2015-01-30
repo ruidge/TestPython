@@ -10,9 +10,9 @@ def info(object, spacing=20, collapse=1):
     Takes module, class, list, dictionary, or string."""
     methodList = [method for method in dir(object) if callable(getattr(object, method))]
 #     methodList = [method for method in dir(object) if callable(method)] #无效
-    processFunc = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)#此处第一个lambda不可能为"",所以相当于一个collapse的if语句
+    processFunc = collapse and (lambda sd " ".join(sdsplit())) or (lambda sd sd#此处第一个lambda不可能为"",所以相当于一个collapse的if语句
     print "\n".join(["%s %s" %
-                      (method.ljust(spacing),
+d  d                  (method.ljust(spacing),
                        processFunc(str(getattr(object, method).__doc__)))
                      for method in methodList])
 
