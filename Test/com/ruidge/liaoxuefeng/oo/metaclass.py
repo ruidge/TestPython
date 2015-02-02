@@ -12,13 +12,29 @@ class ListMetaclass(type):
 class MyList(list):
     __metaclass__ = ListMetaclass  # 指示使用ListMetaclass来定制类
 
+class Test(object):
+    def __init__(self, name, bases, dct):  
+        print "__init__ method"
+        super(Test, cls).__init__(name, bases, dct)  
+        
+    def __new__(cls, name, bases, dct):
+        print "__new__ method"
+        super.__new__(cls, name, bases, dct)
+
+        
+
 if __name__ == "__main__":
 #     l1 = list()
 #     l1.add(1)
 #     print l1
     l2 = MyList()
     l2.add(1)
+    l2.a = "a"
+    l2.b = "b"
     print l2
+    print "##########"
+#     t = Test()
+    print l2.__dict__
 
 # 当我们写下__metaclass__ = ListMetaclass语句时，魔术就生效了，它指示Python解释器在创建MyList时，
 # 要通过ListMetaclass.__new__()来创建，在此，我们可以修改类的定义，比如，加上新的方法，然后，返回修改后的定义。
@@ -27,3 +43,5 @@ if __name__ == "__main__":
 # 2.类的名字；
 # 3.类继承的父类集合；
 # 4.类的方法集合。
+
+# http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python
