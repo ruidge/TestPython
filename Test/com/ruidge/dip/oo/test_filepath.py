@@ -14,7 +14,7 @@ if __name__ == '__main__':
     print a + '--' + b
     t_path = os.path.join(cwd, "aa.bb")
     print os.path.splitext(t_path)
-    print "\n".join([k + "len:" + str(len(k)) for k in glob.glob1(cwd, "*.py")])
+    print "\n".join([k + "len:" + s(len(k)) for k in glob.glob1(cwd, "*.py")])
     print "------------------"
     f = open("C:\\Users\\zhangrui6\\Desktop\\test.mp3")
     print "tell() " , f.tell()

@@ -19,7 +19,7 @@ print time.strftime('%Y-%m-%d'
                     )
 
 ts = time.localtime()
-print 'time.localtime() length is ',str(len(ts))
+print 'time.localtime() length is ',s(len(ts))
 for a in ts:
     print a,
 print
