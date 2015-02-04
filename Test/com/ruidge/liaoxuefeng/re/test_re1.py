@@ -26,3 +26,15 @@ if __name__ == "__main__":
     print re.match(r'^(\d+)(0*)$', '102300').groups()
     #必须让\d+采用非贪婪匹配（也就是尽可能少匹配），才能把后面的0匹配出来，加个?就可以让\d+采用非贪婪匹配：
     print re.match(r'^(\d+?)(0*)$', '102300').groups()
+    
+    print "######"
+
+    re_telephone = re.compile(r'^(\d{3})-(\d{3,8})$')
+    g1= re_telephone.match('010-12345').groups()
+    print type(g1)
+    print g1
+    print g1[0]
+    print g1[1]
+    print re_telephone.match('010-8086').groups()
+    
+    
