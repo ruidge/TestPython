@@ -15,4 +15,5 @@ def now():
     print '2013-12-25'
     
 if __name__ == "__main__":
+    now()
     pass
