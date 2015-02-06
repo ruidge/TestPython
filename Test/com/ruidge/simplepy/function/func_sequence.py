@@ -17,7 +17,7 @@ other = ['o1', ['o21', 'o22', '023'], 'haha', 'hehe']
 print zip(name, age, tel, other)  # 取最短的
 #map:函数作用于序列的每一项值
 print map(None, name, age, tel, other)  # None填充
-print map(lambda *args:reduce(lambda x, y:str(x) + '-' + str(ys args), namesge, tel, other) 
+print map(lambda *args:reduce(lambda x, y:str(x) + '-' + str(y) , args), name, age, tel, other) 
 print '--------------'
 
 r = range(101)
