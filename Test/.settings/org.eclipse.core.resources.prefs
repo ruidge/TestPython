@@ -31,6 +31,7 @@ encoding//com/ruidge/liaoxuefeng/readDex.py=utf-8
 encoding//com/ruidge/liaoxuefeng/sql/test_sqlite3_create.py=utf-8
 encoding//com/ruidge/liaoxuefeng/sql/test_sqlite3_drop.py=utf-8
 encoding//com/ruidge/liaoxuefeng/sql/test_sqlite3_select.py=utf-8
+encoding//com/ruidge/liaoxuefeng/tCoroutine/test_yield.py=utf-8
 encoding//com/ruidge/liaoxuefeng/tFlask/test_flask1.py=utf-8
 encoding//com/ruidge/liaoxuefeng/wsgi/test_wsgi.py=utf-8
 encoding//com/ruidge/simplepy/control/for.py=utf-8
