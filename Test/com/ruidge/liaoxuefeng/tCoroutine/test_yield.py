@@ -17,7 +17,8 @@ def consumer():
         r = '200 OK'
 
 def produce(c):
-    c.next()
+#     c.next() #启动
+    c.send(None) #TypeError: can't send non-None value to a just-started generator
     n = 0
     while n < 5:
         n = n + 1
