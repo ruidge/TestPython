@@ -6,15 +6,20 @@ Created on 2015年2月9日
 '''
 import threading
 
+class MyThreadLocal(threading.local):
+    def __init__(self):
+        self.num = 0
+
 # 创建全局ThreadLocal对象:
-local_school = threading.local()
+local_school = MyThreadLocal()
 
 def process_student():
-    print 'Hello, %s (in %s)' % (local_school.student, threading.current_thread().name)
+    print 'Hello, name %s, num %s, (in %s)' % (local_school.studentName,local_school.num, threading.current_thread().name)
 
 def process_thread(name):
     # 绑定ThreadLocal的student:
-    local_school.student = name
+    local_school.studentName = name
+    local_school.num += 1 
     process_student()
 
 t1 = threading.Thread(target=process_thread, args=('Alice',), name='Thread-A')

@@ -52,6 +52,7 @@ encoding//com/ruidge/simplepy/file/test_file.py=utf-8
 encoding//com/ruidge/simplepy/file/test_pickle.py=utf-8
 encoding//com/ruidge/simplepy/file/test_pickle1.py=utf-8
 encoding//com/ruidge/simplepy/file/test_stringio.py=utf-8
+encoding//com/ruidge/simplepy/file/test_with.py=utf-8
 encoding//com/ruidge/simplepy/function/func_args.py=utf-8
 encoding//com/ruidge/simplepy/function/func_default.py=utf-8
 encoding//com/ruidge/simplepy/function/func_doc.py=utf-8
