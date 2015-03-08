@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 '''
 Created on 2015年1月12日
 
@@ -13,15 +13,13 @@ def mergeSort(data):
     elif(len(data) == 1):
         return data
     else:
-        length = len(data)
-        mid = length / 2
+        mid = len(data) / 2
         leftData = data[:mid]
         rightData = data[mid:]
-        temp1 = mergeSort(leftData)
-        temp2 = mergeSort(rightData)
-        return mergeData(temp1, temp2)
+    return mergelist(mergeSort(leftData), mergeSort(rightData))
+
         
-def mergeData(temp1, temp2):
+def mergelist(temp1, temp2):
     index1 = 0
     index2 = 0
     result = []

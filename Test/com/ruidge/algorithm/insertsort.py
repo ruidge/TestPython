@@ -14,6 +14,7 @@ def insertSort(data):
         while(j < len(data)):
             keyV = data[j]
             i = j - 1
+            #遇到比key大的依次后移
             while(i >= 0):
                 if(data[i] > keyV):
                     data[i + 1] = data[i]
