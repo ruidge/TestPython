@@ -16,7 +16,7 @@ def mergeSort(data):
         mid = len(data) / 2
         leftData = data[:mid]
         rightData = data[mid:]
-    return mergelist(mergeSort(leftData), mergeSort(rightData))
+        return mergelist(mergeSort(leftData), mergeSort(rightData))
 
         
 def mergelist(temp1, temp2):

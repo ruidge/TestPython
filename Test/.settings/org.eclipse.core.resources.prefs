@@ -1,7 +1,9 @@
 eclipse.preferences.version=1
+encoding//com/ruidge/algorithm/bubbleSort.py=utf-8
 encoding//com/ruidge/algorithm/fastsort.py=utf-8
 encoding//com/ruidge/algorithm/insertsort.py=utf-8
 encoding//com/ruidge/algorithm/mergesort.py=utf-8
+encoding//com/ruidge/algorithm/selectSort.py=utf-8
 encoding//com/ruidge/algorithm/temp.py=utf-8
 encoding//com/ruidge/dip/apihelper/test_andor.py=utf-8
 encoding//com/ruidge/dip/apihelper/test_apihelper.py=utf-8
