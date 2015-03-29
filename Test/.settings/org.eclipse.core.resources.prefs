@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//com/ruidge/algorithm/binarySearch.py=utf-8
 encoding//com/ruidge/algorithm/bubbleSort.py=utf-8
 encoding//com/ruidge/algorithm/fastsort.py=utf-8
 encoding//com/ruidge/algorithm/insertsort.py=utf-8
